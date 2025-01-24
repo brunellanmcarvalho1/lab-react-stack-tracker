@@ -1,9 +1,17 @@
+import { useState } from "react";
+import companiesData from "./companies.json";
+import technologiesData from "./technologies.json";
+import Navbar from "./components/Navbar";
+import HomePage from "./pages/HomePage";
 import "./App.css";
 
 function App() {
+  const [companies, setCompanies] = useState(companiesData);
+  const [technologies, setTechnologies] = useState(technologiesData);
   return (
     <div className="App">
-      <h1>LAB | React Stack Tracker</h1>
+      <Navbar />
+      <HomePage />
     </div>
   );
 }
